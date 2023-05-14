@@ -8,10 +8,10 @@ public class Main {
         Bicycle bicycle2 = new Bicycle("bicycle2",2);
 
         car.check();
-        car2.check();
+        //car2.check();
         truck.check();
-        truck2.check();
+        //truck2.check();
         bicycle.check();
-        bicycle2.check();
+        //bicycle2.check();
     }
 }

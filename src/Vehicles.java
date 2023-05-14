@@ -1,6 +1,6 @@
 public abstract class Vehicles implements ServiceStation{
-    private String modelName;
-    private int wheelsCount;
+    private final String modelName;
+    private final int wheelsCount;
 
     public Vehicles(String modelName, int wheelsCount) {
         this.modelName = modelName;
@@ -11,15 +11,27 @@ public abstract class Vehicles implements ServiceStation{
         return modelName;
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
 
     public int getWheelsCount() {
         return wheelsCount;
     }
 
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
+
+    @Override
+    public void check() {
+        if (this.modelName != null && this.wheelsCount != 0) {
+            System.out.println("Обслуживаем " + this.getModelName());
+            for (int i = 0; i < this.getWheelsCount(); i++) {
+                updateTyre();
+            }
+            if (this.getClass().equals(Car.class) || this.getClass().equals(Truck.class)) {
+                checkEngine();
+            }
+            if (this.getClass().equals(Truck.class)) {
+                checkTrailer();
+            }
+        } else {
+            System.out.println("В объекте отсутствуют заполненные поля");
+        }
     }
 }
