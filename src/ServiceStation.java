@@ -1,15 +1,9 @@
 public interface ServiceStation {
     void check();
 
-     default void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
+    void updateTyre();
 
-    default void checkEngine() {
-        System.out.println("Проверяем двигатель");
-    }
+    void checkEngine();
 
-    default void checkTrailer() {
-        System.out.println("Проверяем прицеп");
-    }
+    void checkTrailer();
 }

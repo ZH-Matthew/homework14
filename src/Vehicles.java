@@ -17,7 +17,7 @@ public abstract class Vehicles implements ServiceStation{
     }
 
 
-    @Override
+
     public void check() {
         if (this.modelName != null && this.wheelsCount != 0) {
             System.out.println("Обслуживаем " + this.getModelName());
@@ -33,5 +33,20 @@ public abstract class Vehicles implements ServiceStation{
         } else {
             System.out.println("В объекте отсутствуют заполненные поля");
         }
+    }
+
+    @Override
+    public void updateTyre() {
+        System.out.println("Нельзя применить к этому объекту");
+    }
+
+    @Override
+    public void checkEngine() {
+        System.out.println("Нельзя применить к этому объекту");
+    }
+
+    @Override
+    public void checkTrailer() {
+        System.out.println("Нельзя применить к этому объекту");
     }
 }

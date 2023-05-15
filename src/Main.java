@@ -13,5 +13,10 @@ public class Main {
         //truck2.check();
         bicycle.check();
         //bicycle2.check();
+
+        bicycle.checkEngine();
+        car.checkTrailer();
+        car.updateTyre();
+
     }
 }
